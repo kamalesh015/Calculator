@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <title>Calc</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            text-align: center;
+            color: rgb(155, 241, 18);
+        }
+
+        .calc {
+            height: 550px;
+            width: 350px;
+            margin: auto;
+            margin-top: 50px;
+            border: 10px;
+            border-color: royalblue;
+            max-height: 600px;
+            border-radius: 100px 10px 100px 10px;
+            padding: 10px 10px;
+        }
+
+        .calc #input {
+            height: 50px;
+            width: 85%;
+            color:darkslategrey;
+            border: 3px solid royalblue;
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+
+        }
+
+        .calc .divider {
+            border-bottom: 2px solid royalblue;
+        }
+
+        .calc .buttons {
+            height: 75px;
+            width: 95%;
+            /* border: 3px solid black; */
+            justify-content: space-between;
+            display: flex;
+
+        }
+
+        .calc .buttons input {
+            height: 60px;
+            width: 60px;
+            color: royalblue;
+            border-radius: 50%;
+            font-size: 45px;
+            border-color: royalblue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .calc .submit {
+            margin-left: 5em;
+
+        }
+
+        #solve {
+            width: 75%;
+            float: right;
+            color: royalblue;
+            justify-self: right;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <div class="calc">
+
+        <form name="dummy">
+            <input id="input" cla type="text" value="" name="input" placeholder="0">
+            <div class="buttons">
+                <input type="button" value="7" onclick="dummy.input.value +='7'">
+                <input type="button" value="8" onclick="dummy.input.value +='8'">
+                <input type="button" value="9" onclick="dummy.input.value +='9'">
+                <input type="button" value="-" onclick="dummy.input.value +='-'">
+            </div>
+            <div class="buttons">
+                <input type="button" value="4" onclick="dummy.input.value +='4'">
+                <input type="button" value="5" onclick="dummy.input.value +='5'">
+                <input type="button" value="6" onclick="dummy.input.value +='6'">
+                <input type="button" value="+" onclick="dummy.input.value +='+'">
+            </div>
+            <div class="buttons">
+                <input type="button" value="1" onclick="dummy.input.value +='1'">
+                <input type="button" value="2" onclick="dummy.input.value +='2'">
+                <input type="button" value="3" onclick="dummy.input.value +='3'">
+                <input type="button" value="*" onclick="dummy.input.value +='*'">
+            </div>
+            <div class="buttons">
+                <input type="button" value="C" onclick="dummy.input.value =''">
+                <input type="button" value="0" onclick="dummy.input.value +='0'">
+                <input type="button" value="%" onclick="dummy.input.value +='%'">
+                <input type="button" value="/" onclick="dummy.input.value +='/'">
+            </div>
+
+
+
+            <div>
+                <input id="solve" type="button" value="Solve Me" onclick="dummy.input.value = eval(dummy.input.value)">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
